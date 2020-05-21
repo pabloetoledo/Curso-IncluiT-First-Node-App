@@ -23,15 +23,14 @@ exports.inverseSort = path => {
 }
 
 /* 4. Create a method to get the amount of files starting with one letter*/
-exports.getAmountOfFilesStartingWithALetter = path => {
+exports.getAmountOfFilesStartingWithALetter = (path, letter) => {
     const files = this.getFilesFromPath(path);
     if(files) {
-        let c = 0;
-        var letters = /^[a-zA-Z]+$/; // regular expression for identify letters
+        let c = 0;        
         files.forEach(file => {
-            file.substring(0, 1).match(letters) ? c++ : c                                    
+            file.charAt(0) === letter ? c++ : c                                    
         });        
-        console.log('The amount of files starting with a letter is ', c);
+        console.log(`The amount of files starting with the letter "${letter}" is`, c);
     }
     else {
         console.log('Something was wrong');

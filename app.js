@@ -6,4 +6,4 @@ methods.printFiles(files);
 
 methods.inverseSort('./');
 
-methods.getAmountOfFilesStartingWithALetter('./');
+methods.getAmountOfFilesStartingWithALetter('./', 'a');
