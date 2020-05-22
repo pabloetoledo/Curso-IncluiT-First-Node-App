@@ -33,7 +33,7 @@ const inverseSort = files => {
 }
 
 /* 4. Create a method to get the amount of files starting with one letter*/
-const getAmountOfFilesStartingWithALetter = (files, cletter) => {    
+const getAmountOfFilesStartingWithALetter = (files, letter) => {    
     let c = 0;        
     files.forEach(file => {
         file.charAt(0) === letter ? c++ : c                                    
